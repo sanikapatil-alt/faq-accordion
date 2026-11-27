@@ -1,75 +1,121 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# FAQ Accordion
+## Project Preview
 
-Currently, two official plugins are available:
+![FAQ Accordion Homepage](screenshots/FAQ_page.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A responsive and interactive FAQ Accordion web application built using React, TypeScript, Vite, and CSS.
 
-## React Compiler
+## About the Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The FAQ Accordion is a simple web application that displays frequently asked questions and their answers in an expandable format.
 
-## Expanding the ESLint configuration
+When a user clicks on a question, its answer expands. If another question is clicked, the previously opened answer automatically closes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project demonstrates React components, state management, event handling, conditional rendering, and responsive web design.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Displays multiple frequently asked questions.
+- Expand and collapse answers on clicking questions.
+- Automatically closes the previously opened answer.
+- Smooth expand and collapse animations.
+- Interactive hover effects.
+- Responsive design for desktop and mobile devices.
+- Accessible accordion controls.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Technologies Used
 
+| Technology | Purpose |
+|---|---|
+| React.js | Building user interfaces |
+| TypeScript | JavaScript with static typing |
+| HTML | Webpage structure |
+| CSS | Styling and responsive design |
+| Vite | Development server and build tool |
+| ESLint | Code quality and error checking |
+
+## Project Structure
+
+```text
+faq-accordion/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   └── FAQ.jsx
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation and Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the repository
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/YOUR_USERNAME/faq-accordion.git
 ```
+
+### 2. Navigate to the project folder
+
+```bash
+cd faq-accordion
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+### 5. Open in browser
+
+Visit:
+
+http://localhost:5173/
+
+## How It Works
+
+1. FAQ questions and answers are stored in a JavaScript array of objects.
+2. React's useState Hook manages the currently active question.
+3. The onClick event handles user interactions.
+4. Conditional rendering controls the visibility of answers.
+5. CSS provides animations, hover effects, and responsive layouts.
+
+## Future Enhancements
+
+- Add a search feature for questions.
+- Add FAQ categories.
+- Integrate a backend API.
+- Store questions and answers in a database.
+- Create an admin panel to manage FAQs.
+
+## Project Information
+
+**Project Name:** Simple FAQ Accordion
+
+**Subject:** Full Stack Development
+
+**Frontend Library:** React.js
+
+**Build Tool:** Vite
+
+## Author
+
+Sanika Patil
