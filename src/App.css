@@ -1,0 +1,294 @@
+
+/* =========================================
+   1. GLOBAL APP LAYOUT
+========================================= */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 10%;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #6c4ce3;
+}
+
+.logo span {
+  color: #ff8b9a;
+}
+
+.header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #44415b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #7956e8;
+}
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+  text-align: center;
+  padding: 75px 20px 45px;
+}
+
+.tag {
+  display: inline-block;
+  background: #ebe5ff;
+  color: #704be0;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 22px 0 14px;
+  color: #292541;
+}
+
+.hero p {
+  color: #77748d;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   4. FAQ SECTION
+========================================= */
+
+#faq {
+  width: 100%;
+  padding: 20px 20px 90px;
+}
+
+.faq-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faq-container h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #292541;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #77748d;
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+/* =========================================
+   5. FAQ LIST AND CARDS
+========================================= */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #ebe8f5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(50, 35, 100, 0.04);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #a58af5;
+  box-shadow: 0 6px 20px rgba(108, 76, 227, 0.10);
+}
+
+/* =========================================
+   6. FAQ QUESTION BUTTON
+========================================= */
+
+.faq-question {
+  width: 100%;
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #302b4a;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #704be0;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid #704be0;
+  outline-offset: -3px;
+  border-radius: 10px;
+}
+
+.faq-question span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #eee9ff;
+  color: #704be0;
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* =========================================
+   7. FAQ ANSWER ANIMATION
+========================================= */
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-answer.open {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-content {
+  overflow: hidden;
+  padding: 0 25px;
+  transition: padding 0.35s ease;
+}
+
+.faq-answer.open .faq-answer-content {
+  padding-bottom: 22px;
+}
+
+.faq-answer p {
+  color: #77748d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   8. FOOTER
+========================================= */
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 25px;
+  color: #88849e;
+  font-size: 13px;
+  background: #ffffff;
+}
+
+/* =========================================
+   9. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 18px 6%;
+  }
+
+  .header nav {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 55px 18px 35px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  #faq {
+    padding: 20px 15px 60px;
+  }
+
+  .faq-container h1 {
+    font-size: 25px;
+  }
+
+  .faq-question {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .faq-question span {
+    width: 27px;
+    height: 27px;
+  }
+
+  .faq-answer-content {
+    padding: 0 18px;
+  }
+
+  .faq-answer.open .faq-answer-content {
+    padding-bottom: 18px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   10. REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-answer,
+  .faq-answer-content,
+  .faq-item,
+  .faq-question,
+  .faq-question span {
+    transition: none;
+  }
+}
