@@ -2,7 +2,7 @@
 # FAQ Accordion
 ## Project Preview
 
-![FAQ Accordion Homepage](screenshots/FAQ_page.png)
+![FAQ Accordion Homepage](FAQ_page.png)
 
 A responsive and interactive FAQ Accordion web application built using React, TypeScript, Vite, and CSS.
 
